@@ -1,0 +1,52 @@
+A empresa Viagens&Turismo possui uma linha de ônibus fazendo o trecho
+Mossoró-Natal. Considerando que as viagens são feitas sempre dentro de um
+mesmo dia, elabore um programa que permita ao usuário informar o momento de
+partida e de chegada (hora e minuto) do ônibus. O programa deve calcular o tempo
+total da viagem (em horas e minutos).
+
+Digite o horário de partida (HH:MM): 10:50
+Digite o horário de chegada (HH:MM): 14:20
+O tempo total de viagem foi 3 horas e 30 min.
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+	char separador = ':';
+	
+	cout << "Digite o Horario da Partida: ";
+	int partida_horas, partida_minutos;
+	cin >> partida_horas >> separador >> partida_minutos;
+
+	cout << "Digite o Horario de Chegada: ";
+	int chegada_horas, chegada_minutos;
+	cin >> chegada_horas >> separador >> chegada_minutos;
+
+	int resultado = chegada_horas - partida_horas;
+	int resultado2 = chegada_minutos - partida_minutos;
+
+
+	cout << "O Tempo Total de Viagem foi De " << resultado - 1 << " Horas "
+		<< 'e ' << resultado2 + 60 << " Minutos";
+
+}
+
+Primeiro, subtraia os minutos:
+
+20 - 50 = -30 minutos
+
+Em seguida, subtraia as horas, levando em consideração que você tem um "empréstimo" de 1 hora devido à subtração dos minutos:
+
+14 - 1 (empréstimo) - 10 = 3 horas
+
+Agora, adicione o empréstimo de volta aos minutos:
+
+-30 minutos + 60 minutos (1 hora) = 30 minutos
+
+Portanto, a diferença correta entre 14:20 e 10:50 é de 3 horas e 30 minutos. O carro levou 3 horas e 30 minutos para a viagem.
+
+
+
