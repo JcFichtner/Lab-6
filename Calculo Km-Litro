@@ -1,0 +1,31 @@
+Escreva um programa que peça quantos quilômetros você dirigiu e quantos litros
+de combustível foram gastos e então mostre o consumo do seu carro em km/litro.
+É possível obter um resultado sempre correto usando apenas valores e variáveis
+do tipo inteiro? Faça o teste com o seu programa.
+
+Distância percorrida (km): 300
+Litros de combustível: 30
+O consumo do seu carro foi de 10 km/litro.
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+	cout << "Distancia Percorrida (km): ";
+	float km;
+	cin >> km;
+
+	cout << "Litros de Combustivel: ";
+	float litros;
+	cin >> litros;
+
+	float km_litro = km / litros;
+
+	cout << "O consumo do seu carro foi de " << km_litro << "Km/Litro";
+
+
+}
