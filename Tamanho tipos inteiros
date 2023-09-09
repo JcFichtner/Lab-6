@@ -1,0 +1,38 @@
+Escreva um programa que crie quatro variáveis, uma para cada um dos tipos
+inteiros mostrados abaixo. O programa deve mostrar quantos bytes cada tipo
+ocupa e calcular a quantidade total de memória utilizada pelas variáveis criadas.
+Use espaços nas cadeias de caracteres para produzir a saída no formato abaixo:
+
+short: 2 bytes
+int: 4 bytes
+long: 4 bytes
+long long: 8 bytes
+Total: 18 bytes
+
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+	short var1;
+	cout << sizeof var1 << "Bytes\n";
+
+	int var2;
+	cout << sizeof var2 << "Bytes\n";
+
+	long var3;
+	cout << sizeof var3 << "Bytes\n";
+
+	long long var4;
+	cout << sizeof var4 << "Bytes\n";
+
+	int soma = sizeof var1 + sizeof var2 + sizeof + var3 + sizeof var4;
+
+	cout << "Total: " << soma;
+
+
+
+}
